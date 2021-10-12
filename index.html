@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Calcular IMC población de Medellín</title>
+    <script src="funciones.js"></script>
+</head>
+<body>
+    <section style="display: inline-flex;">
+        <article style="width: 50%; "> 
+            <div style="background-color: green;margin-top: 50px; ">
+                <h2 style="color: white;text-align: center;">CALCULADORA IMC</h2>
+            </div>
+            <diV>
+                <p style="color: rgb(212, 211, 211);text-align: center;">Descubre tu indice de masa corporal</p>
+             </diV>
+            <div>
+            <div style="display: inline-flex;margin-bottom: 10px;justify-content: space-around;">
+                 <label for="sexo">Sexo</label>
+                 <i id="indicadorH" style="color: grey;" class="fas fa-male fa-2x fa-lg ico" onclick="cambiarColor()"></i>
+                 <div class="verticalLine"></div>
+                 <i id="indicadorM" style="color: grey;" class="fas fa-female fa-2x fa-lg ico" onclick="cambiarColor()"></i>
+            </div>
+            </div>
+            <div style="display: inline-flex;margin-bottom: 20px;">
+                <label for="edad">Edad</label>
+                <input type="text" id="edad">
+            </div>                 
+            <div style="display: inline-flex;margin-bottom: 20px;">
+                <label for="peso">Peso</label>
+                <input type="text" id="peso">
+                <p class="unidades" >M</p>
+            </div>
+            <div style="display: inline-flex;margin-bottom: 20px;">
+                <label for="altura">Altura</label>
+                <input type="text" id="altura">
+                <p class="unidades">KG</p>
+            </div>
+                 <div style="margin-left: 20%;margin-right: 20%;">
+                     <button class="btn btn-success" onclick="calcularIMC()">CALCULAR IMC</button>
+                 </div>  
+            </div>        
+        </article>
+        <article style="width: 50%">
+           <div style="justify-content: center;text-align: center;">
+               <h2 style="color: gray;">Resultado</h2>
+               <p style="color: green; font-size:50px;font-weight: bold;" id="resultado">0.0</p>
+           </div>            
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>    
+          </div>  
+          <p id="flecha" style="color: black;padding: 0%;"><i class="fas fa-caret-up"></i></p>                        
+        <hr style="margin-left: 5%;margin-right: 5%;">
+        <p class="parrafo">Peso Ideal: 50 - 68 (KG)</p>
+        <div style="border-radius: 5px;border: 1px solid #eee;margin-left:5%">
+                <p><i id="bp" class="fas fa-tachometer-alt ico " style="color: blue;"></i>Bajo Peso</p> 
+                <p><i id="sal" class="fas fa-tachometer-alt ico" style="color: green;"></i>Saludable</p>
+                <p><i id="exp" class="fas fa-tachometer-alt ico" style="color: yellow;"></i>Exceso de Peso</p>
+                <p><i id="obe" class="fas fa-tachometer-alt ico" style="color: red;"></i>Obeso</p>
+        </div>
+        </article>
+    </section>
+</body>
+</html>
